@@ -4,7 +4,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
 import DropDown from './DropDown';
 import PriceChart from './PriceChart';
 import UserTokenList from './UserTokenList'
-import {Coin} from '../store/coinSlice';
+import {Coin} from './../types';
 import { fetchCoins } from './../store/coinSlice';
 import { useAppSelector, useAppDispatch } from './../hooks';
 import {defaultChartDuration} from './../constants'

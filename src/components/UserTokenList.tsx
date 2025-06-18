@@ -3,10 +3,9 @@ import { useAppSelector, useAppDispatch } from './../hooks';
 import { CursorArrowRaysIcon } from '@heroicons/react/24/outline'
 import { fetchUserTokenBalance } from '../store/userTokenSlice';
 import {weiToEther} from './../utils'
-import {Token} from './../store/userTokenSlice'
 import PriceChart from './PriceChart';
 import {ChainMap} from './../constants';
-import { IUserTokenList } from '../types';
+import { IUserTokenList, Token } from '../types';
 
 const UserTokenList = ({address, chainId}: IUserTokenList) => {
    const defaultChartDuration: number = 7;
@@ -104,6 +103,7 @@ const UserTokenList = ({address, chainId}: IUserTokenList) => {
       </div>
       <div className='pt-4 pb-4 pl-4 bg-white basis-2/3'>
           {selectedToken?.contract_address  && <PriceChart selectedToken={""} chartDuration={chartDuration} onDurationSelect={onDurationSelect} chain={chainName} tokenAddress={selectedToken?.contract_address} isCoingecko={false}/>}
+          {error && <p className="text-red-500">Error: {error}</p>}
       </div>
       </div>
     </div>

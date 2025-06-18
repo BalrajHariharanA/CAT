@@ -86,7 +86,7 @@ const PriceChart: React.FC<IToken> = ({selectedToken, chartDuration, onDurationS
                 <CanvasJSChart options = {options} />
               </div>
             )}
-            {loading === 'succeeded' && prices?.length === 0 && (
+            {loading === 'success' && prices?.length === 0 && (
               <p className="text-gray-600">No data for chart.</p>
             )}
           </div>
