@@ -7,7 +7,7 @@ import UserTokenList from './UserTokenList'
 import {Coin} from './../types';
 import { fetchCoins } from './../store/coinSlice';
 import { useAppSelector, useAppDispatch } from './../hooks';
-import {defaultChartDuration} from './../constants';
+import {defaultChartDuration, ChainMap} from './../constants';
 
 const  Dashboard: React.FC = () => {
   const [token, setToken] = useState<Coin | null>(null);
@@ -37,6 +37,9 @@ const  Dashboard: React.FC = () => {
     } else {
       return <div className='flex items-center text-red-600 font-bold'><ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 font-bold"/>{change && (change * -1).toFixed(2)}%</div>
     }
+  }
+  if(chainId && !Object.values(ChainMap).includes(chainId)){
+    return <div className='text-2xl text-center p-5'>Chain not supported. Supported chains are Ethereum, BSC, Polygon.</div>
   }
   return (
       <div className="w-full pt-10">

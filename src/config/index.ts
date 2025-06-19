@@ -1,5 +1,5 @@
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi"
-import { mainnet, bsc } from "@reown/appkit/networks"
+import { mainnet, bsc, polygon } from "@reown/appkit/networks"
 
 console.log(import.meta.env.VITE_COINGECKO_API_ENDPOINT)
 
@@ -9,7 +9,7 @@ if (!projectId) {
   throw new Error("Project ID is not defined")
 }
 
-export const chains = [mainnet, bsc] as any
+export const chains = [mainnet, bsc, polygon] as any
 
 export const wagmiAdapter = new WagmiAdapter({
   ssr: true,
