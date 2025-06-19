@@ -2,7 +2,7 @@
 
 CAT, List tokens and the details and price chart. You can connect your wallet and see your tokens as well.
 
-![CAT1](https://i.postimg.cc/vcQjFyG9/cat1.png)
+![CAT1](https://www.flickr.com/photos/203093870@N08/54599840521/in/dateposted-public/lightbox/)
 ![CAT2](https://i.postimg.cc/VdDhzhNh/cat2.png)
 
 ## 📚 Tech Stack
