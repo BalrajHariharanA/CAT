@@ -1,11 +1,12 @@
 import {useState, useEffect, useMemo} from 'react'
-import { useAppSelector, useAppDispatch } from './../hooks';
+import { useAppDispatch } from './../hooks';
 import { CursorArrowRaysIcon } from '@heroicons/react/24/outline'
 import { fetchUserTokenBalance } from '../store/userTokenSlice';
 import {weiToEther} from './../utils'
 import PriceChart from './PriceChart';
 import {ChainMap} from './../constants';
 import { IUserTokenList, Token } from '../types';
+import {useBalanceFetch} from './../hooks/useBalanceFetch'
 
 const UserTokenList = ({address, chainId}: IUserTokenList) => {
    const defaultChartDuration: number = 7;
@@ -16,7 +17,8 @@ const UserTokenList = ({address, chainId}: IUserTokenList) => {
     }
     const chainName: string = getChainName(chainId);
     const dispatch = useAppDispatch();
-    const { userTokens, loading, error } = useAppSelector((state) => state.userTokeBalance);
+    // const { userTokens, loading, error } = useAppSelector((state) => state.userTokeBalance);
+    const { userTokens, loading, error } = useBalanceFetch({address, chainName});
     const updatedTokens = userTokens.filter(t => parseFloat(t.quote_rate)>0)
     useEffect(() => {
      setChartDuration(defaultChartDuration);

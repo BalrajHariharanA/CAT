@@ -5,3 +5,5 @@ export const timerOptions = [
 export enum ChainMap {
     'ethereum' = 1, 'bsc' = 56, 'polygon' = 137
 };
+
+export const cacheExpiry = 60 * 60 * 1000;

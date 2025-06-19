@@ -7,7 +7,7 @@ import UserTokenList from './UserTokenList'
 import {Coin} from './../types';
 import { fetchCoins } from './../store/coinSlice';
 import { useAppSelector, useAppDispatch } from './../hooks';
-import {defaultChartDuration} from './../constants'
+import {defaultChartDuration} from './../constants';
 
 const  Dashboard: React.FC = () => {
   const [token, setToken] = useState<Coin | null>(null);
