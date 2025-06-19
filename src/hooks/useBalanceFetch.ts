@@ -19,7 +19,6 @@ export const useBalanceFetch = ({address, chainName}:{address: string, chainName
       const { data, timestamp }: CacheEntry = JSON.parse(cached);
       const isExpired = Date.now() - timestamp > cacheExpiry;
       if (!isExpired) {
-        console.log('timestamp', timestamp)
         dispatch({
           type: 'user/fetchUserTokenBalance/fulfilled',
           payload: data,
