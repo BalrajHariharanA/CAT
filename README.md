@@ -1,6 +1,6 @@
 # C.A.T - Crypto asset tracker
 
-CAT, List tokens and the details and price chart. You can connect your wallet and see your tokens as well.
+CAT, List tokens and the details and price chart. You can connect your wallet and see your tokens as well. The application currently list Ethereum and BSC assets of your wallet.
 
 ![CAT1](https://i.postimg.cc/vcQjFyG9/cat1.png)
 ![CAT2](https://i.postimg.cc/VdDhzhNh/cat2.png)
