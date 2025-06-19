@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AppkitProvider>
       <Provider store={store}>
-      <App />
+        <App />
       </Provider>
     </AppkitProvider>
   </StrictMode>,
