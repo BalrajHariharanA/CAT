@@ -10,6 +10,10 @@
     "lint": "eslint src --ext ts,tsx",
     "format": "prettier --write 'src/**/*.{ts,tsx,css}'"
   },
+  "engines": {
+    "npm": ">=11.4.2",
+    "node": ">=22.9.0"
+  },
   "dependencies": {
     "@canvasjs/react-charts": "^1.0.2",
     "@headlessui/react": "^2.2.4",
